@@ -10,7 +10,9 @@ import org.jfree.chart.axis.DateAxis;
 import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.time.*;
+import org.jfree.data.time.Hour;
+import org.jfree.data.time.TimeSeries;
+import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.xy.XYDataset;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +36,7 @@ public class ChartService {
     private SpeedtestRepository speedtestRepository;
 
     private static final double BYTES_TO_MBYTES_DIVISOR = 125000.0;
-    private static final String CHART_TITLE = "DIGI Letöltési és feltöltési sebesség (utolsó 15)";
+    private static final String CHART_TITLE = "Wifi sebesség statisztika (utolsó 20)";
     private static final String TIME_AXIS_LABEL = "Idő";
     private static final String VALUE_AXIS_LABEL = "Sebesség";
 

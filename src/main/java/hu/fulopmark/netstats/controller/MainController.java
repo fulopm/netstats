@@ -3,7 +3,6 @@ package hu.fulopmark.netstats.controller;
 import hu.fulopmark.netstats.repository.SpeedtestRepository;
 import hu.fulopmark.netstats.service.ChartService;
 import lombok.AllArgsConstructor;
-
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,8 +31,8 @@ public class MainController {
 
         return ResponseEntity.status(HttpStatus.OK)
                 .header(HttpHeaders.CONTENT_DISPOSITION, "filename=\"chart.png\"")
-                        .contentType(MediaType.IMAGE_PNG)
-                        .body(chartService.getLastNSpeedTestsChart(15));
+                .contentType(MediaType.IMAGE_PNG)
+                .body(chartService.getLastNSpeedTestsChart(20));
 
     }
 }
